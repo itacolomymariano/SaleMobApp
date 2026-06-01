@@ -6,6 +6,7 @@
         Comando Auto Pecas
     </author>
     <content src="index.html" />
+    <preference name="deployment-target" value="15.0" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-navigation href="https://app.comandoap.com.br/*" />
@@ -32,7 +33,7 @@
         <preference name="AndroidWindowSplashScreenAnimationDuration" value="300" />
     </platform>
     <platform name="ios">
-        <preference name="deployment-target" value="13.0" />
+        <preference name="deployment-target" value="15.0" />
         <preference name="target-device" value="universal" />
         <preference name="AutoHideSplashScreen" value="true" />
         <preference name="SplashScreenDelay" value="300" />
