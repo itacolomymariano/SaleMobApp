@@ -54,7 +54,7 @@
         <icon src="res/icon/ios/icon-167.png" width="167" height="167" />
         <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
         <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
-        <resource-file src="GoogleService-Info.plist" />
+        <!-- GoogleService-Info.plist: apenas na raiz do projeto; cordova-plugin-firebasex copia para iOS -->
         <edit-config target="NSFaceIDUsageDescription" file="*-Info.plist" mode="merge">
             <string>Use Face ID para login rapido e seguro no Comando App</string>
         </edit-config>
