@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config>
+        <domain includeSubdomains="true">10.0.1.215</domain>
+        <trust-anchors>
+            <certificates src="@raw/protheus_cert" />
+            <certificates src="system" />
+        </trust-anchors>
+    </domain-config>
+</network-security-config>

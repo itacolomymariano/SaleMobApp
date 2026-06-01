@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "260061386880",
+    "project_id": "comandoappdev",
+    "storage_bucket": "comandoappdev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260061386880:android:09c6f09c28e45531c4ae65",
+        "android_client_info": {
+          "package_name": "com.itacolomysma.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwuAzo0nGhkVLsxd8r3z5IW4iid-z-ob0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

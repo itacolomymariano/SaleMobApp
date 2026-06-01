@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.itacolomysma.app" version="1.0.5" android-versionCode="10005" ios-CFBundleVersion="10005" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>Comando App</name>
+    <description>Sistema de Gestao de Mensagens - Comando Auto Pecas</description>
+    <author email="itaco@comandoap.com.br" href="https://app.comandoap.com.br">
+        Comando Auto Pecas
+    </author>
+    <content src="index.html" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-navigation href="https://app.comandoap.com.br/*" />
+    <plugin name="cordova-plugin-firebasex" spec="^19.0.1" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="^6.0.4" />
+    <plugin name="cordova-plugin-file" spec="^8.1.3" />
+    <plugin name="cordova-plugin-file-opener2" spec="^4.0.0" />
+    <platform name="android">
+        <icon density="ldpi" src="res/icon/android/ldpi.png" />
+        <icon density="mdpi" src="res/icon/android/mdpi.png" />
+        <icon density="hdpi" src="res/icon/android/hdpi.png" />
+        <icon density="xhdpi" src="res/icon/android/xhdpi.png" />
+        <icon density="xxhdpi" src="res/icon/android/xxhdpi.png" />
+        <icon density="xxxhdpi" src="res/icon/android/xxxhdpi.png" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+        </config-file>
+        <resource-file src="res/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+        <resource-file src="res/raw/protheus_cert.der" target="app/src/main/res/raw/protheus_cert.der" />
+        <preference name="GradlePluginGoogleServicesEnabled" value="true" />
+        <preference name="GradlePluginGoogleServicesVersion" value="4.4.2" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash/ic_splash.png" />
+        <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
+        <preference name="AndroidWindowSplashScreenAnimationDuration" value="300" />
+    </platform>
+    <platform name="ios">
+        <preference name="deployment-target" value="13.0" />
+        <preference name="target-device" value="universal" />
+        <preference name="AutoHideSplashScreen" value="true" />
+        <preference name="SplashScreenDelay" value="300" />
+        <preference name="FadeSplashScreen" value="true" />
+        <preference name="FadeSplashScreenDuration" value="300" />
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarStyle" value="default" />
+        <icon src="res/icon/ios/icon-20.png" width="20" height="20" />
+        <icon src="res/icon/ios/icon-40.png" width="40" height="40" />
+        <icon src="res/icon/ios/icon-60.png" width="60" height="60" />
+        <icon src="res/icon/ios/icon-29.png" width="29" height="29" />
+        <icon src="res/icon/ios/icon-58.png" width="58" height="58" />
+        <icon src="res/icon/ios/icon-87.png" width="87" height="87" />
+        <icon src="res/icon/ios/icon-80.png" width="80" height="80" />
+        <icon src="res/icon/ios/icon-120.png" width="120" height="120" />
+        <icon src="res/icon/ios/icon-180.png" width="180" height="180" />
+        <icon src="res/icon/ios/icon-76.png" width="76" height="76" />
+        <icon src="res/icon/ios/icon-152.png" width="152" height="152" />
+        <icon src="res/icon/ios/icon-167.png" width="167" height="167" />
+        <icon src="res/icon/ios/icon-1024.png" width="1024" height="1024" />
+        <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
+        <resource-file src="GoogleService-Info.plist" />
+        <edit-config target="NSFaceIDUsageDescription" file="*-Info.plist" mode="merge">
+            <string>Use Face ID para login rapido e seguro no Comando App</string>
+        </edit-config>
+        <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
+            <string>O Comando App precisa acessar arquivos para compartilhar documentos</string>
+        </edit-config>
+        <edit-config target="UIBackgroundModes" file="*-Info.plist" mode="merge">
+            <array>
+                <string>remote-notification</string>
+            </array>
+        </edit-config>
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>
