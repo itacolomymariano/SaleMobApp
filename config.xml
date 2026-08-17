@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.itacolomysma.app" version="1.0.5" android-versionCode="10005" ios-CFBundleVersion="10005" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.itacolomysma.app" version="1.0.18" android-versionCode="100018" ios-CFBundleVersion="100018" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Comando App</name>
     <description>Sistema de Gestao de Mensagens - Comando Auto Pecas</description>
     <author email="itaco@comandoap.com.br" href="https://app.comandoap.com.br">
@@ -30,15 +30,16 @@
         <preference name="GradlePluginGoogleServicesVersion" value="4.4.2" />
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash/ic_splash.png" />
         <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
-        <preference name="AndroidWindowSplashScreenAnimationDuration" value="300" />
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#FFFFFF" />
+        <preference name="AndroidWindowSplashScreenAnimationDuration" value="0" />
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="15.0" />
         <preference name="target-device" value="universal" />
         <preference name="AutoHideSplashScreen" value="true" />
-        <preference name="SplashScreenDelay" value="300" />
-        <preference name="FadeSplashScreen" value="true" />
-        <preference name="FadeSplashScreenDuration" value="300" />
+        <preference name="SplashScreenDelay" value="0" />
+        <preference name="FadeSplashScreen" value="false" />
+        <preference name="FadeSplashScreenDuration" value="0" />
         <preference name="StatusBarOverlaysWebView" value="false" />
         <preference name="StatusBarStyle" value="default" />
         <icon src="res/icon/ios/icon-20.png" width="20" height="20" />
