@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.itacolomysma.app" version="1.0.19" android-versionCode="100019" ios-CFBundleVersion="100019" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.itacolomysma.app" version="1.0.22" android-versionCode="100022" ios-CFBundleVersion="100022" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Comando App</name>
     <description>Sistema de Gestao de Mensagens - Comando Auto Pecas</description>
     <author email="itaco@comandoap.com.br" href="https://app.comandoap.com.br">
