@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.itacolomysma.app" version="1.0.23" android-versionCode="100023" ios-CFBundleVersion="100023" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.itacolomysma.app" version="1.0.24" android-versionCode="100025" ios-CFBundleVersion="100025" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Comando App</name>
     <description>Sistema de Gestao de Mensagens - Comando Auto Pecas</description>
     <author email="itaco@comandoap.com.br" href="https://app.comandoap.com.br">
@@ -14,6 +14,11 @@
     <plugin name="cordova-plugin-x-socialsharing" spec="^6.0.4" />
     <plugin name="cordova-plugin-file" spec="^8.1.3" />
     <plugin name="cordova-plugin-file-opener2" spec="^4.0.0" />
+    <plugin name="cordova-plugin-fingerprint-aio" spec="^6.0.1">
+        <variable name="FACEID_USAGE_DESCRIPTION" value="Use Face ID para login rapido e seguro no Comando App" />
+    </plugin>
+    <hook type="after_prepare" src="hooks/patch-fingerprint-ios.js" />
+    <hook type="after_plugin_add" src="hooks/patch-fingerprint-ios.js" />
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
         <icon density="mdpi" src="res/icon/android/mdpi.png" />
@@ -35,6 +40,7 @@
     </platform>
     <platform name="ios">
         <preference name="deployment-target" value="15.0" />
+        <preference name="SwiftVersion" value="5.0" />
         <preference name="target-device" value="universal" />
         <preference name="AutoHideSplashScreen" value="true" />
         <preference name="SplashScreenDelay" value="0" />
@@ -60,8 +66,14 @@
         <edit-config target="NSFaceIDUsageDescription" file="*-Info.plist" mode="merge">
             <string>Use Face ID para login rapido e seguro no Comando App</string>
         </edit-config>
+        <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+            <string>O Comando App usa a camera para foto de perfil (selfie)</string>
+        </edit-config>
         <edit-config target="NSPhotoLibraryUsageDescription" file="*-Info.plist" mode="merge">
-            <string>O Comando App precisa acessar arquivos para compartilhar documentos</string>
+            <string>O Comando App precisa acessar fotos e arquivos para perfil e compartilhar documentos</string>
+        </edit-config>
+        <edit-config target="NSPhotoLibraryAddUsageDescription" file="*-Info.plist" mode="merge">
+            <string>O Comando App pode salvar imagens relacionadas ao perfil e documentos</string>
         </edit-config>
         <edit-config target="UIBackgroundModes" file="*-Info.plist" mode="merge">
             <array>
