@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.itacolomysma.app" version="1.0.27" android-versionCode="100027" ios-CFBundleVersion="100027" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.itacolomysma.app" version="1.0.29" android-versionCode="100029" ios-CFBundleVersion="100029" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>Comando App</name>
     <description>Sistema de Gestao de Mensagens - Comando Auto Pecas</description>
     <author email="itaco@comandoap.com.br" href="https://app.comandoap.com.br">
@@ -19,6 +19,7 @@
     </plugin>
     <hook type="after_prepare" src="hooks/patch-fingerprint-ios.js" />
     <hook type="after_plugin_add" src="hooks/patch-fingerprint-ios.js" />
+    <hook type="after_prepare" src="hooks/patch-android-splash.js" />
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
         <icon density="mdpi" src="res/icon/android/mdpi.png" />
@@ -31,11 +32,12 @@
         </config-file>
         <resource-file src="res/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <resource-file src="res/raw/protheus_cert.der" target="app/src/main/res/raw/protheus_cert.der" />
+        <resource-file src="res/splash/splash_fullscreen.png" target="app/src/main/res/drawable-nodpi/splash_fullscreen.png" />
         <preference name="GradlePluginGoogleServicesEnabled" value="true" />
         <preference name="GradlePluginGoogleServicesVersion" value="4.4.2" />
         <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash/ic_splash.png" />
         <preference name="AndroidWindowSplashScreenBackground" value="#E8F2FA" />
-        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#E8F2FA" />
+        <preference name="AndroidWindowSplashScreenIconBackgroundColor" value="#FFFFFF" />
         <preference name="AndroidWindowSplashScreenAnimationDuration" value="0" />
     </platform>
     <platform name="ios">
