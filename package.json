@@ -1,7 +1,7 @@
 {
   "name": "com.itacolomysma.app",
   "displayName": "Comando App",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "Comando App - Gestao de Mensagens (Angular + Cordova)",
   "main": "index.js",
   "scripts": {
